@@ -1,0 +1,50 @@
+
+
+  type DashboardCard = {
+  title: string;
+  total: number;
+  description: string;
+};
+
+export default function Home() {
+  const infos: DashboardCard[] = [
+  {
+    title: "Veículos",
+    total: 0,
+    description: "Veículos cadastrados",
+  },
+  {
+    title: "Clientes",
+    total: 0,
+    description: "Clientes cadastrados",
+  },
+  {
+    title: "Contratos",
+    total: 0,
+    description: "Contratos ativos",
+  },
+];
+
+  return (
+   
+    <div className="bg-indigo-950 text-white min-h-screen  rounded-xl">
+     <div className="p-10">
+      <h1 className="text-3xl mb-10">FleetManager</h1>
+
+      <h2 className="text-xl">Visão Geral</h2>
+      <p className="text-[12px] text-gray-400">Sistema de gestão de locação de veículos</p>
+
+       <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+          {infos.map((inf) => (
+            <div key={inf.title}  className="bg-indigo-900 text-white rounded-xl p-5"> 
+            <p>{inf.title}</p>
+            <span> {inf.total} </span>
+            <p className="text-[10px]">{inf.description}</p>
+            </div>
+          ))}
+        </div>
+     </div>
+    </div>
+     
+  );
+}
