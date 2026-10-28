@@ -37,9 +37,9 @@ export default function Home() {
 
        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {infos.map((inf) => (
-            <div key={inf.title}>
-             <DashboardCard title={inf.title} total={inf.total} description={inf.description}/>
-            </div>
+            
+             <DashboardCard key={inf.title} title={inf.title} total={inf.total} description={inf.description}/>
+           
 
           ))}
         </div>
