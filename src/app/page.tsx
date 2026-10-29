@@ -1,3 +1,4 @@
+import { DashboardCard } from "@/components/dashboard/dashboard-card";
 
 
   type DashboardCard = {
@@ -36,11 +37,10 @@ export default function Home() {
 
        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
           {infos.map((inf) => (
-            <div key={inf.title}  className="bg-indigo-900 text-white rounded-xl p-5"> 
-            <p>{inf.title}</p>
-            <span> {inf.total} </span>
-            <p className="text-[10px]">{inf.description}</p>
-            </div>
+            
+             <DashboardCard key={inf.title} title={inf.title} total={inf.total} description={inf.description}/>
+           
+
           ))}
         </div>
      </div>
