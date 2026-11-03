@@ -39,8 +39,6 @@ export default function Home() {
           {infos.map((inf) => (
             
              <DashboardCard key={inf.title} title={inf.title} total={inf.total} description={inf.description}/>
-           
-
           ))}
         </div>
      </div>
